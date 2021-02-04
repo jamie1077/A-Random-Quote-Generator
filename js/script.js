@@ -2,7 +2,7 @@
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
-let html = ``;
+
 /*** 
  * `quotes` array 
 ***/
@@ -55,9 +55,9 @@ getRandomQuote();
  * `printQuote` function
 ***/
 function printQuote(){
-  let item = getRandomQuote();
+  const item = getRandomQuote();
 
-  html = `
+  let html = `
     <p class="quote">
       ${item.quote}
     </p>
@@ -68,12 +68,10 @@ function printQuote(){
     </p>
   `;
 
-  return html;
+  document.getElementById('quote-box').innerHTML = html;
 }
 
 printQuote();
-
-document.getElementById('quote-box').innerHTML = html;
 
 /***
  * click event listener for the print quote button
