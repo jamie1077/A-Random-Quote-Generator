@@ -12,7 +12,7 @@ const quotes = [
     quote: 'You\'re gonna need a bigger boat', 
     source: 'Chief Brody',
     citation: 'Jaws',
-    year: '1975'
+    year: '1975',
   },
   {
     quote: 'Okay, Houston we have a problem.', 
@@ -21,16 +21,15 @@ const quotes = [
     year: '1995'
   },
   {
-    quote: 'Frankly my dear I don’t give a damn.', 
-    source: 'Rhett Butler',
-    citation: 'Gone with the wind',
-    year: '1939'
+    quote: 'Winners don\'t make excuses when the other side plays the game.', 
+    source: 'Harvey Specter',
+    citation: 'Suits',
+    tags: ['tv series', 'law', 'comedy', 'drama']
   },
   {
     quote: 'We have to go back!', 
     source: 'Jack Shephard',
-    citation: 'Lost',
-    year: ''
+    citation: 'Lost'
   },
   {
     quote: 'I\'m gonna make him an offer he can\'t refuse.', 
@@ -45,16 +44,13 @@ const quotes = [
     year: '2018'
   },
   {
-    quote: 'All we have to decide is what to do with the time that is given us.', 
-    source: 'Gandalf',
-    citation: 'Lord of the Rings: Fellowship of the Ring',
-    year: ''
+    quote: 'Every accomplishment starts with the decision to try.', 
+    source: 'John F Kennedy'
   },
   {
     quote: 'You know what I like about people? They stack so well.', 
     source: 'Frank Underwood',
-    citation: 'House of Cards',
-    year: ''
+    citation: 'House of Cards'
   },
   {
     quote: 'Son, your ego is writing cheques your body can\'t cash.', 
@@ -65,14 +61,17 @@ const quotes = [
   {
     quote: 'I want painful, difficult, devastating, life-changing, extraordinary love.', 
     source: 'Olivia Pope',
-    citation: 'Scandal',
-    year: ''
+    citation: 'Scandal'
   },
   {
     quote: 'Success is walking from failure to failure with no loss of enthusiasm.', 
-    source: 'Winston Churchill',
-    citation: '',
-    year: ''
+    source: 'Winston Churchill'
+  },
+  {
+    quote: 'Snakes. Why\'d it have to be snakes.', 
+    source: 'Indiana Jones',
+    citation: 'Raiders of the Lost Ark',
+    year: '1981'
   }
 ];
 
@@ -110,7 +109,7 @@ function randomRGB(value){
  * This markup I learned from the 'Nesting templates' section of the Mozilla Developer website: 
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals. This then returns that messsage 
  * to the page by targeting the page elements id 
- * This also returns the funtion to change the background color of the page using the randomRGB function and passing the 
+ * This also returns the function to change the background color of the page using the randomRGB function and passing the 
  * randomValue to it
 ***/
 function printQuote(){
@@ -124,6 +123,7 @@ function printQuote(){
       ${item.source}
       ${item.citation ? `<span class="citation">${item.citation}</span>`: ''}
       ${item.year ? `<span class="year">${item.year}</span>`: ''}
+      ${item.tags ? `<span class="tags">${item.tags.join(', ')}</span>` : ''}
     </p>
   `;
 

@@ -115,6 +115,12 @@ h1 {
   font-style: normal;
 }
 
+.tags{
+  display: block;
+  margin-top: 1.25rem;
+  font-size: .875rem;
+}
+
 @media (min-width: 768px) {
   body {
     padding: 25px;
