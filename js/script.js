@@ -4,8 +4,7 @@ project 1 - A Random Quote Generator
 ******************************************/
 
 /*** 
- * `quotes` array - a list of quotes from movies and tv with an historical quote thrown in!
- * an array of quote objects, each containing 4 properties
+ * `quotes` array - a list of quotes from movies and tv with a couple of historical quotes thrown in!
 ***/
 const quotes = [
   {
